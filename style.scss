@@ -1,0 +1,583 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Montserrat+Alternates:wght@400;500;600;700;800&display=swap');
+@import './__mixins.scss';
+
+@include header();
+@include main();
+@include orange();
+@include dark-orange();
+@include subtitle();
+@include about-text();
+@include footer();
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #FFF5EE;
+  max-width: 1920px;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+body.menu-open {
+  overflow: hidden;
+}
+
+.white{
+    color: white;
+}
+
+.whitesp{
+  background-color: white;
+}
+
+.home {
+  background: linear-gradient(70deg, #402603, #683700, #BA6F3D, #E5AC31, #ECE5BD);
+  min-height: 100vh;
+  background-position: center center;
+  background-attachment: fixed;
+  padding: 60px 0;
+  position: relative;
+  overflow: hidden;
+
+}
+
+
+.about,
+.products,
+.useful,
+.contact,
+.section {
+  padding: 30px 0 50px;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.about     { background-image: url(img/about.png); }
+.products  { background-image: url(img/products.png); }
+.useful    { background-image: url(img/usefulpng.png); }
+.contact   { background-image: url(img/contact.png); }
+
+.team {
+  display: grid;
+  align-content: center;
+  text-align: center;
+  padding: 60px 0;
+  margin: 0 auto;
+
+  img {
+    margin: 1% auto;
+    width: 60%;
+  }
+}
+
+.counts {
+  @extend .section;
+  display: grid;
+  align-content: center;
+  text-align: center;
+  width: 70vw;
+  margin: 60px auto;
+
+  &__success {
+    margin: 2% 0;
+  }
+
+  .about-text {
+    font-weight: 700;
+  }
+
+  &__number {
+    font-family: "Caveat", cursive;
+    font-weight: 700;
+    font-size: 150px;
+    color: #000;
+  }
+}
+
+.choice {
+  @extend .section;
+  font-size: 25px;
+  color: #000;
+  display: grid;
+  align-content: center;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+
+  h2 {
+    margin: 0;
+  }
+
+  &__caption {
+    font-weight: 700;
+    margin: 3% auto;
+    font-size: 28px;
+  }
+
+  &__aspects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  &__aspect {
+    width: 25vw;
+    margin: 3% auto;
+  }
+
+  &__img {
+    margin: 3% auto;
+  }
+}
+
+.recipe {
+  @extend .section;
+  font-size: 25px;
+  color: #000;
+  display: grid;
+  align-content: center;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+
+  h2 {
+    margin: 0;
+  }
+
+  &__components {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 3% auto;
+    gap: 20px;
+  }
+
+  &__fatlabel {
+    font-weight: 700;
+    font-size: 28px;
+  }
+
+  &__cookies {
+    margin-left: 10%;
+  }
+
+  &__step {
+    margin: 4% auto;
+    width: 70vw;
+  }
+  @media (max-width: 780px) {
+    &__label, &__step {
+      font-weight: 600;
+      font-size: 12px;
+    }
+  }
+}
+
+.usage {
+  @extend .section;
+  text-align: center;
+  font-size: 25px;
+  color: #000;
+  display: grid;
+  align-content: center;
+  width: 90%;
+  margin: 0 auto;
+
+  h2 {
+    margin: 0;
+  }
+
+  &__fat {
+    font-weight: 700;
+    font-size: 28px;
+    margin-bottom: 2%;
+  }
+
+  &__reg {
+    margin: 1% auto;
+  }
+
+  &__indent {
+    margin-bottom: 5%;
+  }
+}
+
+.honey {
+  @extend .section;
+  font-size: 28px;
+  color: #000;
+  display: grid;
+  align-content: center;
+  width: 80%;
+  margin: 100px auto;
+
+  &__cards {
+    display: flex;
+    align-items: flex-end;
+    gap: 60px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__sub {
+    font-size: 35px;
+    margin: 2% auto;
+    text-align: center;
+  }
+
+  &__card {
+    width: 465px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 15px;
+  }
+
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-grow: 1;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  &__weight,
+  &__description {
+    font-size: 20px;
+    padding: 10px 0 20px;
+    color: #6F6F6F;
+  }
+
+  &__set {
+    width: 80%;
+    height: auto;
+  }
+  @media (max-width: 1445px) {
+    font-size: 22px;
+    width: 90%;
+    margin: 50px auto;
+    &__sub {
+      font-size: 30px;
+      margin: 2% auto;
+    }
+    &__weight,
+    &__description {
+      font-size: 16px;
+    }
+    &__card {
+      width: 350px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  @media (max-width: 780px) {
+    font-size: 18px;
+    width: 90%;
+    margin: 20px auto;
+    &__sub {
+      font-size: 20px;
+      margin: 2% auto;
+    }
+    &__weight,
+    &__description {
+      font-size: 12px;
+    }
+    &__card {
+      width: 200px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  @media (max-width: 480px) {
+    font-size: 12px;
+    width: 90%;
+    margin: 10px auto;
+    &__sub {
+      font-size: 15px;
+      margin: 2% auto;
+    }
+    &__weight,
+    &__description {
+      font-size: 10px;
+    }
+    &__card {
+      width: 200px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+}
+
+
+.center {
+  margin: 0 auto;
+}
+
+.button {
+  max-width: 600px;
+  padding: 15px 30px 10px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  color: #000;
+  background-color: #FDF3DC;
+  border: 1px solid #000;
+
+  &:hover {
+    background-color: #EDD5A2;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  &__txt {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 18px;
+    margin: 0;
+  }
+}
+
+/* Остальная разметка: таблицы, формы, модалки и контакты */
+
+main {
+  max-width: 400px;
+  margin: 50px auto;
+  background-color: #fff8f0;
+  border: 1px solid #e6d4bd;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.window, .minwindow {
+  background-color: #fff8f0;
+  border: 1px solid #e6d4bd;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  text-align: center;
+  margin: 50px auto;
+}
+
+.window { max-width: 1400px; }
+.minwindow { max-width: 500px; }
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2%;
+}
+
+input, select, option, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #cbb89d;
+  border-radius: 8px;
+  background-color: #fffdf9;
+  font-size: 14px;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+
+  &:hover {
+    color: #c77c4d;
+  }
+}
+
+.error-message {
+  color: #a94442;
+  background-color: #f2dede;
+  border: 1px solid #ebccd1;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+/* media-запросы */
+
+@media (max-width: 1100px) {
+  .team, .counts, .choice, .recipe, .usage, .honey {
+    width: 80%;
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .about, .products, .useful, .contact {
+    padding-bottom: 80px;
+  }
+
+  .choice__aspect, .honey__card {
+    width: 90%;
+  }
+
+  .contacts__data {
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .contacts__map {
+    height: 300px;
+  }
+}
+
+@media (max-width: 780px) {
+  .about,
+.products,
+.useful,
+.contact,
+.section {
+  padding: 10px 0 10px;
+}
+  .counts__number {
+    font-size: 120px;
+  }
+
+  .recipe__fatlabel,
+  .usage__fat {
+    font-size: 20px;
+  }
+
+  .recipe__label{
+    font-size: 18px;
+  }
+  .choice{
+    &__caption{
+      margin: 1% 0;
+      font-size: 22px;
+    }
+    &__aspect, &__img{
+      margin: 1% 0;
+    }
+    &__description{
+      font-size: 18px;
+  }
+}
+
+  .usage{
+    &__indent, &__reg{
+      font-size: 18px;
+
+    }
+}
+
+  .contacts__data {
+    font-size: 20px;
+  }
+
+  .button__txt {
+    font-size: 18px;
+  }
+
+  .honey__card {
+    width: 90%;
+  }
+
+  .contacts__map {
+    height: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about,
+  .products,
+  .useful,
+  .contact,
+  .section {
+    padding: 8px 0;
+  }
+  .team, .counts, .choice, .recipe, .usage, .honey {
+    width: 70%;
+    padding: 10px 0;
+  }
+
+  .counts__number {
+    font-size: 90px;
+  }
+
+  .contacts__data {
+    font-size: 18px;
+  }
+
+  .button__txt {
+    font-size: 16px;
+  }
+
+  .honey__card {
+    width: 90%;
+  }
+
+  .contacts__map {
+    height: 220px;
+  }
+
+  .choice{
+    &__caption{
+      margin: 1% 0;
+      font-size: 12px;
+    }
+    &__aspect, &__img{
+      margin: 1% 0;
+    }
+    &__description{
+      font-size: 10px;
+  }
+  img{
+    height: 80px;
+  }
+}
+.recipe{
+  &__cookies{
+    height: 180px;
+  }
+  &__stepimg{
+    height: 40px;
+  }
+}
+
+  .usage{
+    &__indent, &__reg{
+      font-size: 10px;
+
+    }
+}
+}
